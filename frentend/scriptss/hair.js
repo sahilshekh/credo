@@ -1,5 +1,5 @@
 
-let url = `https://credo-project2.herokuapp.com/hairs`;
+let url = `https://credo-project.herokuapp.com/hairs`;
 
  async function getProducts() {
         try {
