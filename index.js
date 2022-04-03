@@ -12,7 +12,7 @@ const cors = require("cors");
 const connect = require("./config/db");
 const Usercontroller = require("./controllers/user.controller")
 const {register,login} = require("./controllers/auth.controller")
-
+const path=require("path")
 
 const hairController = require('./controller/hair.controller')
 const bathController = require('./controller/bath.controller')
@@ -26,6 +26,7 @@ app.use(cors({
 })
 );
 app.use(express.json())
+app.use("/",express.static(path.join(__dirname,"static")))
 app.use("/user",Usercontroller)
 
 app.post("/register",register)
