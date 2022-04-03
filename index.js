@@ -26,7 +26,7 @@ app.use(cors({
 })
 );
 app.use(express.json())
-app.use("/",express.static(path.join(__dirname,"static")))
+app.use("/",express.frentend(path.join(__dirname,"frentend")))
 app.use("/user",Usercontroller)
 
 app.post("/register",register)
